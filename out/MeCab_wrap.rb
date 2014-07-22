@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'ffi'
 
-module MeCab
+module MeCabLib
   extend FFI::Library
   ffi_lib 'mecab'
   class MecabDictionaryInfoT < FFI::Struct; end
@@ -53,8 +53,8 @@ module MeCab
            :bnext, MecabNodeT.ptr,
            :rpath, MecabPathT.ptr,
            :lpath, MecabPathT.ptr,
-           :surface, :pointer,
-           :feature, :pointer,
+           :surface, :string,
+           :feature, :string,
            :id, :uint,
            :length, :ushort,
            :rlength, :ushort,
@@ -151,8 +151,8 @@ module MeCab
   attach_function :mecab_sparse_tostr, :mecab_sparse_tostr, [ :pointer, :string ], :string
   attach_function :mecab_sparse_tostr2, :mecab_sparse_tostr2, [ :pointer, :string, :size_t ], :string
   attach_function :mecab_sparse_tostr3, :mecab_sparse_tostr3, [ :pointer, :string, :size_t, :string, :size_t ], :string
-  attach_function :mecab_sparse_tonode, :mecab_sparse_tonode, [ :pointer, :string ], :pointer
-  attach_function :mecab_sparse_tonode2, :mecab_sparse_tonode2, [ :pointer, :string, :size_t ], :pointer
+  attach_function :mecab_sparse_tonode, :mecab_sparse_tonode, [ :pointer, :string ], MecabNodeT.ptr
+  attach_function :mecab_sparse_tonode2, :mecab_sparse_tonode2, [ :pointer, :string, :size_t ], MecabNodeT.ptr
   attach_function :mecab_nbest_sparse_tostr, :mecab_nbest_sparse_tostr, [ :pointer, :size_t, :string ], :string
   attach_function :mecab_nbest_sparse_tostr2, :mecab_nbest_sparse_tostr2, [ :pointer, :size_t, :string, :size_t ], :string
   attach_function :mecab_nbest_sparse_tostr3, :mecab_nbest_sparse_tostr3, [ :pointer, :size_t, :string, :size_t, :string, :size_t ], :string

@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'ffi'
 
-module MeCab
+module MeCabLib
   extend FFI::Library
   ffi_lib 'mecab'
 %}
