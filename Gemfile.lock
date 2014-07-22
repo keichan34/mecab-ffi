@@ -1,0 +1,33 @@
+GIT
+  remote: https://github.com/windwiny/ffi-swig-generator.git
+  revision: 8c820bee7c514cb1afd20f87c7582275b0195173
+  branch: patch-1
+  specs:
+    ffi-swig-generator (0.3.3)
+      nokogiri (>= 1.6.0)
+      rake (>= 0.9.2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.0)
+    ffi (1.9.3)
+    method_source (0.8.2)
+    mini_portile (0.6.0)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (10.3.2)
+    slop (3.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ffi
+  ffi-swig-generator!
+  pry
+  rake
