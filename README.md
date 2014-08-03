@@ -1,5 +1,7 @@
 # mecab_ffi
 
+[![Build Status](https://travis-ci.org/keichan34/mecab_ffi.svg?branch=master)](https://travis-ci.org/keichan34/mecab_ffi)
+
 [Ruby FFI](https://github.com/ffi/ffi) bindings to [MeCab](https://code.google.com/p/mecab/).
 
 Aimed to be less prone to segfaults and other errors, and we get the big plus of not having a compile step.
