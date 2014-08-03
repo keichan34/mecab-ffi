@@ -9,7 +9,6 @@ before_install:
   - sudo apt-get install -y mecab-ipadic mecab-ipadic-utf8
   - sudo dpkg -i mecab_0.996-1.1_amd64.deb
 rvm:
-  - 1.9.3
   - 2.0.0
   - 2.1.0
   - 2.1.2
